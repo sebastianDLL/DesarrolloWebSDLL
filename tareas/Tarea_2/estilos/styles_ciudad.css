@@ -1,0 +1,18 @@
+body{
+    background-image: url("../imagenes/backgraund_ciudad.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+div{
+    color: aliceblue;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+
+    text-align: center;
+}
