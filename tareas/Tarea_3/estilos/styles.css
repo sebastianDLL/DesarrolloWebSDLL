@@ -1,0 +1,178 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+body {
+    padding: auto;
+    background-color: #fff;
+}
+
+
+
+.contenedor {
+    margin: auto;
+    width: 950px;
+    height: auto;
+    border: 1px solid #000;
+}
+
+.U-Principal{
+    background-color: rgb(116, 192, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    border: 2px solid #000;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 45px;
+}
+
+.Universidad {
+    padding: 15px;
+}
+
+
+.Universidad h1{
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+
+.Universidad h2{
+    color: blue;
+}
+
+.Universidad h3{
+    color: black;
+}
+
+.Facultad{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.header img {
+    padding: 12px;
+    width: 100px;
+    height: 100px;
+}
+
+.carrera{
+    font-size: 12px;
+    text-align: center;
+}
+
+.letras{
+    background-color: white;
+}
+
+.letras-navegación{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    border: 1px solid #000;
+}
+
+.letras-navegación a{
+    background-color: yellow;
+    display: block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    width: 100px;
+    border: 1px solid #000;
+}
+
+
+.medio {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+}
+
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 130px;
+    background-color: rgb(0, 255, 170);
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.centro{
+    display: flex;
+    justify-content: row;
+    width: 550px ;
+}
+
+
+
+.cont-estudiante {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 200px;
+    background-color: rgb(116, 192, 255);
+    align-items:stretch;
+    border: 1px solid #000;
+    
+}
+
+.cont-estudiante .dato{
+    border: 1px solid #000;
+    width: auto;
+    height: auto;
+}
+
+.contador-hijo {
+    margin: 20px;
+}
+
+.hijo{
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+.contador{
+    background-color: white;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.ultimo{
+    background-color: blue;
+    width: auto;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid #000;
+
+}
+
+.ultimo h3{
+    color: black;
+}
