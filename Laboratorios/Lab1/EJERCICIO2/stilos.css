@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 80px;
+}
+header{
+    display: line;
+    width: auto;
+    height: auto;
+    background-color: yellow;
+    margin: auto;
+    
+}
+
