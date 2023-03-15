@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(95, 197, 245);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    padding-top: 25px;
+    margin: auto;
+    text-align: center;
+}
+form{
+    height: 35px 35px;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 52, 160);
+}
+
+.formulario{
+    align-items: center;
+    padding: 20% 20%;
+    padding-top: 130px;
+    padding-left: 500px;
+    
+}
+
+label{
+    color: aliceblue;
+}

@@ -7,14 +7,12 @@
     <title>Tabla suma</title>
 </head>
 <body>
-    <?php
-    for ($i = 1; $i <= 10; $i++) {
-        for ($j = 1; $j <= 10; $j++) {
-            echo "$i + $j = " . ($i + $j) . "<br>";
-        }
-        echo "<br>";
-    }
-    ?>
+<?php
+    include('funciones.php');
+    $n = $_POST['n'];
+
+    echo tablasumar($n);
+?>
 
 </body>
 </html>

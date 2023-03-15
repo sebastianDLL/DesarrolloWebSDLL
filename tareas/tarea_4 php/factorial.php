@@ -7,16 +7,13 @@
     <title>Factorial</title>
 </head>
 <body>
-    <?php
-    $num = 4;
-    $factorial = 1;
+<?php
+    include('funciones.php');
+    $num = $_POST['num'];
 
-    for ($i = 1; $i <= $num; $i++) {
-        $factorial *= $i;
-    }
+    echo factorial($num);
+?>
 
-    echo "El factorial de $num es $factorial";
-    ?>
 
 </body>
 </html>

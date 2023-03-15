@@ -1,0 +1,31 @@
+body{
+    background-color: dimgrey;
+    font-family: fantasy;
+    font-size: larger;
+}
+
+
+h1{
+    padding-top: 25px;
+    margin: auto;
+    text-align: center;
+}
+form{
+    height: 35px 35px;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formulario{
+    align-items: center;
+    padding: 20% 20%;
+    padding-top: 100px;
+    padding-left: 500px;
+    
+}
+
+label{
+    color: aliceblue;
+}
