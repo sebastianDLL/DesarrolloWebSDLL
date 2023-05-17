@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    a: <input type="number" id="a">
+    b: <input type="number" id="b">
+    operacion
+    <select id="operacion" onchange="cambiarOperacion()">
+        <option value="suma">suma</option>
+        <option value="resta">resta</option>
+        <option value="multiplicacion">multiplicacion</option>
+        <option value="division">division</option>
+    </select>
+    <button id="boton" onclick="calcular()">calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        function cambiarOperacion() {
+            operacion = document.getElementById('operacion').value;
+            console.log(operacion);
+            switch (operacion) {
+                case 'suma':
+                    document.getElementById('boton').onclick = sumar;
+                    break;
+                case 'resta':
+                    document.getElementById('boton').onclick = restar;
+                    break;
+                case 'multiplicacion':
+                    document.getElementById('boton').onclick = multiplicar;
+                    break;
+                case 'division':
+                    document.getElementById('boton').onclick = dividir;
+                    break;
+            }
+        }
+
+        function calcular() {
+            operacion = document.getElementById('operacion').value;
+            switch (operacion) {
+                case 'suma':
+                    sumar();
+                    break;
+                case 'resta':
+                    restar();
+                    break;
+                case 'multiplicacion':
+                    multiplicar();
+                    break;
+                case 'division':
+                    dividir();
+                    break;
+            }
+        }
+
+        function sumar() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let resultado = parseInt(a) + parseInt(b);
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+
+        function restar() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let resultado = parseInt(a) - parseInt(b);
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+
+        function multiplicar() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let resultado = parseInt(a) * parseInt(b);
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+
+        function dividir() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let resultado = parseInt(a) / parseInt(b);
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>

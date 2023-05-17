@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            height: 200px;
+            width: 200px;
+            border: 2px dashed black;
+            background-color: burlywood;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a = prompt("introducir valor del numero 1 ");
+        let b = prompt("introducir valor del numero 2 ");
+        let c = prompt("introducir valor del numero 3 ");
+
+        let m = 0 ;
+        if(a>b && a>c){
+            m = a ;
+        }
+        if(b>a && b>c){
+            m = b ;
+        }
+        if(c>a && c>b){
+            m = c ;
+        }
+        document.write(`<div class="container"> mayor = ${m} </div> `);
+    </script>
+</body>
+</html>
