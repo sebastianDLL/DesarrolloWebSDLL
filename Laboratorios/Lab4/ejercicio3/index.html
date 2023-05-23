@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agrandar y Reducir Imagen</title>
+    <style>
+        #container {
+            text-align: center;
+        }
+
+        #img-container {
+            display: inline-block;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; background-color: aqua;">
+        considere que las medidas son el pixeles "px"
+    </h1>
+    <div id="container">
+        <div id="img-container">
+            <img id="my-image" src="appsheet3.jpg">
+        </div>
+        <br>
+        <button onclick="agrandarImagen()">Agrandar</button>
+        <button onclick="reducirImagen()">Reducir</button>
+        <input type="number" id="cantidad">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

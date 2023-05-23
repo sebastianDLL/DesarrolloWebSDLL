@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tabla de Estudiantes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th{
+            background-color: #a6daf4;
+            color: white;
+            border: 1px solid black;
+            padding: 8px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .mejor-estudiante {
+            background-color: rgb(94, 251, 94);
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tabla-estudiantes">
+        <tr>
+            <th>nro</th>
+            <th>Apellidos_Nombres</th>
+            <th>Edad</th>
+            <th>Materia</th>
+            <th>Nota</th>
+        </tr>
+    </table><br>
+
+    <button onclick="encontrarMejorEstudiante()">Encontrar Mejor nota</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
