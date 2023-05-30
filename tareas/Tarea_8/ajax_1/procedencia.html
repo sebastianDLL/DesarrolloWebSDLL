@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../trabajo en clase/tema5 ajax/bd fetch/estilo.css">
+</head>
+
+<body>
+    <div id="cabeza">
+        Pagina web de Listar
+    </div>
+    <div id="contenido">
+        <div class="menu">
+            <ul>
+                <li><a href="javascript:Listar()">Listar</a> </li>
+                <li><a href="javascript:cargarContenido('form_create.php')">Insertar</a></li>
+            </ul>
+        </div>
+        <div id="datos">
+            Bienvenidos a la pagina web
+        </div>
+    </div>
+
+    <script>
+        function Listar() {
+            var datosDiv = document.getElementById("datos");
+            datosDiv.innerHTML = ""; // Eliminar el contenido existente
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", "read.php", true);
+            ajax.setRequestHeader("Content-Type", "application/json");
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState === 4 && ajax.status === 200) {
+                    var response = JSON.parse(ajax.responseText);
+                    dibujar(response);
+                }
+            };
+            ajax.send();
+
+            function dibujar(objeto) {
+                var selectDepartamentos = document.createElement("select");
+                selectDepartamentos.id = "departamentos";
+                var labelDepartamentos = document.createElement("label");
+                labelDepartamentos.htmlFor = "departamentos";
+                labelDepartamentos.textContent = "Departamentos:";
+                labelDepartamentos.appendChild(selectDepartamentos);
+
+                var selectProvincias = document.createElement("select");
+                selectProvincias.id = "provincias";
+                var labelProvincias = document.createElement("label");
+                labelProvincias.htmlFor = "provincias";
+                labelProvincias.textContent = "Provincias:";
+                labelProvincias.appendChild(selectProvincias);
+
+                var datosDiv = document.getElementById("datos");
+                datosDiv.appendChild(labelDepartamentos);
+                datosDiv.appendChild(selectDepartamentos);
+                datosDiv.appendChild(labelProvincias);
+                datosDiv.appendChild(selectProvincias);
+
+                var departamentos = [];
+                objeto.forEach(function (item) {
+                    if (item.departamento_id !== null && !departamentos.includes(item.departamento_id)) {
+                        departamentos.push(item.departamento_id);
+                        var optionDepartamento = document.createElement("option");
+                        optionDepartamento.value = item.departamento_id;
+                        optionDepartamento.textContent = item.departamento_nombre;
+                        selectDepartamentos.appendChild(optionDepartamento);
+                    }
+                });
+
+                selectDepartamentos.addEventListener("change", function () {
+                    var departamentoId = this.value;
+                    cargarProvincias(departamentoId);
+                });
+
+                function cargarProvincias(departamentoId) {
+                    selectProvincias.innerHTML = "";
+
+                    var provincias = objeto.filter(function (item) {
+                        return item.departamento_id === departamentoId && item.provincia_id !== null;
+                    });
+
+                    provincias.forEach(function (provincia) {
+                        var optionProvincia = document.createElement("option");
+                        optionProvincia.value = provincia.provincia_id;
+                        optionProvincia.textContent = provincia.provincia_nombre;
+                        selectProvincias.appendChild(optionProvincia);
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
