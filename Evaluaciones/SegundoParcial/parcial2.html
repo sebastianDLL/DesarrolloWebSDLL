@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>parcial2</title>
+</head>
+<body>
+    <div class="principal" id="principal">
+        <div id="arriba">
+            <div class="pregunta">
+                <a onclick="dibujarFormulario()">ejercicio2</a>
+            </div>
+            <div id="titulo">
+                <p>ALUMNO</p>
+            </div>
+            <div class="pregunta">
+                <a href="javascript:Contenidofetch('formInsertar.php')">ejercicio3</a>
+            </div>
+        </div>
+        <div id="contenido">
+            <div id="divSelect"></div>
+            <div id="divImagen"></div>
+        </div>
+    </div> 
+    <div id="arriba">
+        <div class="pregunta">
+            <a href="javascript:cargarContenido('listar.php')">ejercicio4</a>
+        </div>
+        <div id="mensaje">
+            <p>FECHA</p>
+        </div>
+        <div class="button">
+            <button class="button" onclick="cambiarBlancoNegro()">Blanco y Negro</button>
+        </div>
+        <div class="pregunta">
+            <a href="javascript:cargarDatos()">ejercicio5</a>
+        </div>
+    </div>
+
+    <a href="parcial2.html">volver</a>s
+</body>
+<script src="jscript.js"></script>
+</html>
