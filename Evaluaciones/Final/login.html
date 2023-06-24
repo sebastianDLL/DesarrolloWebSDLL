@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        #teclado {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 200px;
+        }
+
+        #teclado button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+        }
+
+        #contrasena {
+            font-size: 24px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="formularioLogin" method="POST">
+    
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" readonly required><br>
+
+        <div id="teclado">
+            <button onclick="agregarCaracter(7)">7</button>
+            <button onclick="agregarCaracter(3)">3</button>
+            <button onclick="agregarCaracter(4)">4</button>
+            <button onclick="agregarCaracter(6)">6</button>
+            <button onclick="agregarCaracter(9)">9</button>
+            <button onclick="agregarCaracter(2)">2</button>
+            <button onclick="agregarCaracter(1)">1</button>
+            <button onclick="agregarCaracter(5)">5</button>
+            <button onclick="agregarCaracter(8)">8</button>
+        </div>
+
+        <button type="button" onclick="enviarFormulario()">Entrar</button>
+        <button type="button" onclick="limpiarContrasena()">Limpiar</button>
+    </form>
+
+    <script>
+      
+        function mezclarTeclado() {
+            var teclado = document.getElementById('teclado');
+            for (var i = teclado.children.length; i >= 0; i--) {
+                var indiceAleatorio = Math.floor(Math.random() * i);
+                var elementoAleatorio = teclado.children[indiceAleatorio];
+                teclado.appendChild(elementoAleatorio);
+            }
+        }
+
+
+        
+        function agregarCaracter(caracter) {
+            var inputContrasena = document.getElementById('contrasena');
+            inputContrasena.value += caracter;
+        }
+
+        
+        function limpiarContrasena() {
+            var inputContrasena = document.getElementById('contrasena');
+            inputContrasena.value = '';
+        }
+
+        
+        function enviarFormulario() {
+            var formularioLogin = document.getElementById('formularioLogin');
+            formularioLogin.addEventListener('submit', function(event) {
+            });
+            formularioLogin.action = "autenticar.php";
+            formularioLogin.submit();
+        }
+
+        window.addEventListener('load', function() {
+            mezclarTeclado();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  header {
+    background-color: #480202;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .escudo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .container {
+    display: flex;
+    
+  }
+  
+  nav {
+    background-color: #fcf527;
+    width: 200px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    padding: 10px;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #eee;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #162c6a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .fila-tarjetas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tarjeta {
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #0a4db3;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta h3 {
+    margin-top: 0;
+  }
+  
+  /* Estilos adicionales para el tamaño y margen de las tarjetas */
+  .tarjeta {
+  
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+
